@@ -111,7 +111,7 @@ export default function AdminDashboard() {
       {/* Users */}
 
       <div style={{ margin: "20px 0" }}>
-        <AdBanner />
+        <AdBanner dataAdSlot={"6094078122"} />
       </div>
 
       <div className="bg-white rounded shadow p-6">
@@ -206,6 +206,10 @@ export default function AdminDashboard() {
         </table>
       </div>
 
+      <div className="mt-10 flex gap-4 justify-between" >
+        <AdBanner dataAdSlot={"3659220548"} />
+        <AdBanner dataAdSlot={"3659220548"} />
+      </div>
       <PostModal
         isOpen={openPost}
         onClose={() => setOpenPost(false)}

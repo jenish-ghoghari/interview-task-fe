@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const AdBanner = () => {
+const AdBanner = ({ dataAdSlot }) => {
   useEffect(() => {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -14,7 +14,7 @@ const AdBanner = () => {
       className="adsbygoogle"
       style={{ display: "block" }}
       data-ad-client="ca-pub-4684859326398267"
-      data-ad-slot="6094078122"
+      data-ad-slot={dataAdSlot}
       data-ad-format="auto"
       data-full-width-responsive="true"
     />
