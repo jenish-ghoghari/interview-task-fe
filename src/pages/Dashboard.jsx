@@ -52,7 +52,7 @@ export default function Dashboard() {
       </div>
 
       <div style={{ margin: "20px 0" }}>
-        <AdBanner dataAdSlot="1234567890" />
+        <AdBanner dataAdSlot="6094078122" />
       </div>
     </div>
   );

@@ -1,12 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const AdBanner = ({ dataAdSlot }) => {
+  const adInitialized = useRef(false);
+
   useEffect(() => {
-    // This pushes the ad to the Google script once the component mounts
-    try {
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    } catch (error) {
-      console.error("AdSense error:", error);
+    // Only push the ad if it hasn't been initialized yet
+    if (!adInitialized.current) {
+      try {
+        (window.adsbygoogle = window.adsbygoogle || []).push({});
+        adInitialized.current = true; // Mark as initialized
+      } catch (error) {
+        console.error("AdSense error:", error);
+      }
     }
   }, []);
 
