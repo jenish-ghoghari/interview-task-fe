@@ -19,6 +19,10 @@ export default function Dashboard() {
 
   return (
     <div className="rounded-lg bg-white p-6 shadow">
+      <div style={{ margin: "20px 0" }}>
+        <AdBanner dataAdSlot="6094078122" />
+      </div>
+
       <h2 className="text-2xl font-bold mb-4">Post Management</h2>
       <div className="overflow-x-auto">
         <table className="w-full border">
@@ -49,10 +53,6 @@ export default function Dashboard() {
             )}
           </tbody>
         </table>
-      </div>
-
-      <div style={{ margin: "20px 0" }}>
-        <AdBanner dataAdSlot="6094078122" />
       </div>
     </div>
   );

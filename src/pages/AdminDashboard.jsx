@@ -109,6 +109,11 @@ export default function AdminDashboard() {
   return (
     <div className="space-y-10">
       {/* Users */}
+
+      <div style={{ margin: "20px 0" }}>
+        <AdBanner />
+      </div>
+
       <div className="bg-white rounded shadow p-6">
         <div className="flex justify-between mb-5">
           <h2 className="text-2xl font-bold">User Management</h2>
@@ -214,10 +219,6 @@ export default function AdminDashboard() {
         onSubmit={handleUserSubmit}
         editData={editUser}
       />
-
-      <div style={{ margin: "20px 0" }}>
-        <AdBanner dataAdSlot="6094078122" />
-      </div>
     </div>
   );
 }
