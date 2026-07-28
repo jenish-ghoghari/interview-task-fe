@@ -18,11 +18,7 @@ const AdBanner = ({ dataAdSlot }) => {
     <ins
       ref={adRef}
       className="adsbygoogle"
-      style={{
-        display: "block",
-        width: "100%",
-        minHeight: "250px",
-      }}
+      style={{ display: "block", width: "100%", minHeight: "250px" }}
       data-ad-client="ca-pub-1234567890123456"
       data-ad-slot={dataAdSlot}
       data-ad-format="auto"
