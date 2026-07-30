@@ -12,7 +12,7 @@ import Dashboard from "./pages/Dashboard";
 
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-import BlogHome from "./components/BlogHome";
+import BlogHome from "./pages/BlogHome";
 
 
 const App = () => {
