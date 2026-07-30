@@ -1,4 +1,5 @@
 import { Search, Menu, ArrowRight } from "lucide-react";
+import AdBanner from "../googleAds/AdBanner";
 
 const categories = [
   "Technology",
@@ -116,6 +117,9 @@ export default function BlogHome() {
         </div>
       </section>
 
+        <div style={{ margin: "20px 0" }}>
+        <AdBanner dataAdSlot="6094078122" />
+      </div>
       {/* Categories */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-6">
@@ -236,6 +240,10 @@ export default function BlogHome() {
 
       </section>
 
+       <div className="mt-10 flex gap-4 justify-between" >
+        <AdBanner dataAdSlot="3659220548" />
+        <AdBanner dataAdSlot="3659220548" />
+      </div>
       {/* Newsletter */}
       <section className="bg-indigo-700 text-white py-24">
 
