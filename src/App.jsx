@@ -32,9 +32,7 @@ const App = () => {
        <Route
           path="/"
           element={
-            <ProtectedRoute role="Viewer">
               <BlogHome />
-            </ProtectedRoute>
           }
         />
 
