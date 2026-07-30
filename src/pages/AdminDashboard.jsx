@@ -13,7 +13,6 @@ import {
 
 import PostModal from "./PostModels/PostModal";
 import UserModal from "./UserModels/UserModal";
-import AdBanner from "../googleAds/AdBanner";
 
 export default function AdminDashboard() {
   const [posts, setPosts] = useState([]);
@@ -110,10 +109,6 @@ export default function AdminDashboard() {
     <div className="space-y-10">
       {/* Users */}
 
-      <div style={{ margin: "20px 0" }}>
-        <AdBanner dataAdSlot="6094078122" />
-      </div>
-
       <div className="bg-white rounded shadow p-6">
         <div className="flex justify-between mb-5">
           <h2 className="text-2xl font-bold">User Management</h2>
@@ -206,10 +201,7 @@ export default function AdminDashboard() {
         </table>
       </div>
 
-      <div className="mt-10 flex gap-4 justify-between" >
-        <AdBanner dataAdSlot="3659220548" />
-        <AdBanner dataAdSlot="3659220548" />
-      </div>
+     
       <PostModal
         isOpen={openPost}
         onClose={() => setOpenPost(false)}
