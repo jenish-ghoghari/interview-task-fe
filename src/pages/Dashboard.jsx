@@ -22,9 +22,7 @@ export default function Dashboard() {
     <div className="min-h-screen bg-gray-50 p-6">
 
       {/* Google Ad */}
-      <div className="mb-8">
-        <AdBanner dataAdSlot="6094078122" />
-      </div>
+    
 
       {/* Heading */}
       <div className="mb-8">
