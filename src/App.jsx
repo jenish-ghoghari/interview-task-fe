@@ -12,7 +12,7 @@ import Dashboard from "./pages/Dashboard";
 
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-
+import BlogHome from "./components/BlogHome";
 
 
 const App = () => {
@@ -27,7 +27,19 @@ const App = () => {
         element={<Register />}
       />
       {/* Common Layout */}
-      <Route path="/" element={<Navbar />}>
+      
+       
+       <Route
+          path="/"
+          element={
+            <ProtectedRoute role="Viewer">
+              <BlogHome />
+            </ProtectedRoute>
+          }
+        />
+
+      
+      <Route element={<Navbar />}>
         {/* Admin */}
         <Route
           path="admin-dashboard"
@@ -38,8 +50,9 @@ const App = () => {
           }
         />
 
+       
         <Route
-          index
+          path="/user"
           element={
             <ProtectedRoute role="Viewer">
               <Dashboard />
