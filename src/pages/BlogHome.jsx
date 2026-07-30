@@ -74,8 +74,8 @@ export default function BlogHome() {
 
           <nav className="hidden md:flex gap-8 font-medium">
             <a href="/">Home</a>
-            <a href="/">Blogs</a>
-            <a href="/">Categories</a>
+            <a href="/">User Blogs</a>
+            <a href="/user">Categories</a>
             <a href="/">About</a>
             <a href="/">Contact</a>
           </nav>
