@@ -52,7 +52,7 @@ import toast from "react-hot-toast";
         if (response.role === "Admin") {
             navigate("/admin-dashboard", { replace: true });
         } else {
-            navigate("/", { replace: true });
+            navigate("/user", { replace: true });
         }
     } catch (error) {
         const message =
