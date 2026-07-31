@@ -1,43 +1,36 @@
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
-
-import {
-  Route,
-  Routes
-} from "react-router-dom";
-
-
-import AdminDashboard from "./pages/AdminDashboard";
-import Dashboard from "./pages/Dashboard";
+import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar";
 import ProtectedRoute from "./components/ProtectedRoute";
-import BlogHome from "./pages/BlogHome";
 
+import BlogHome from "./pages/BlogHome";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+import Dashboard from "./pages/Dashboard";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const App = () => {
   return (
     <Routes>
-      <Route
-        path="/login"
-        element={<Login />}
-      />
-      <Route
-        path="/register"
-        element={<Register />}
-      />
-      {/* Common Layout */}
-      
-       
-       <Route
-          path="/"
+      {/* Routes WITHOUT Navbar */}
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+
+      {/* Common Layout WITH Navbar */}
+      <Route element={<Navbar />}>
+        {/* Public */}
+        <Route index element={<BlogHome />} />
+
+        {/* User */}
+        <Route
+          path="user"
           element={
-              <BlogHome />
+            <ProtectedRoute role="Viewer">
+              <Dashboard />
+            </ProtectedRoute>
           }
         />
 
-      
-      <Route element={<Navbar />}>
         {/* Admin */}
         <Route
           path="admin-dashboard"
@@ -47,22 +40,9 @@ const App = () => {
             </ProtectedRoute>
           }
         />
-
-       
-        <Route
-          path="/user"
-          element={
-            <ProtectedRoute role="Viewer">
-              <Dashboard />
-            </ProtectedRoute>
-          }
-        />
       </Route>
     </Routes>
-
-  )
-
-}
-
+  );
+};
 
 export default App;
