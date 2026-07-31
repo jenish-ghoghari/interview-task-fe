@@ -64,28 +64,6 @@ const blogs = [
 export default function BlogHome() {
   return (
     <div className="bg-gray-50 min-h-screen">
-
-      {/* Navbar */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b">
-        <div className="max-w-7xl mx-auto h-20 px-6 flex items-center justify-between">
-          <h1 className="text-3xl font-bold text-indigo-600">
-            BlogSpace
-          </h1>
-
-          <nav className="hidden md:flex gap-8 font-medium">
-            <a href="/">Home</a>
-            <a href="/user">User Blogs</a>
-            <a href="/user">Categories</a>
-            <a href="/">About</a>
-            <a href="/">Contact</a>
-          </nav>
-
-          <button className="md:hidden">
-            <Menu />
-          </button>
-        </div>
-      </header>
-
       {/* Hero */}
       <section className="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 text-white">
         <div className="max-w-7xl mx-auto px-6 py-28">
